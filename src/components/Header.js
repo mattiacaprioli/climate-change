@@ -5,7 +5,7 @@ import Image from '../assets/img/planet.jpg';
 
 const Header = () => {
   return (
-    <section className='section bg-gray-100'>
+    <section className='section bg-gray-100 mt-16'>
       <div className='container mx-auto'>
         <div className='flex flex-col xl:flex-row gap-10'>
           <img className='object-cover h-full md:w-[266px] mx-auto rounded-2xl' src={Image} alt='immagine pianeta' />
