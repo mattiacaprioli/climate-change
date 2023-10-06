@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { navigation } from '../data/data';
 
 // import logo
-import Logo from '../assets/img/logo-climate-dashboard.png'
+import Logo from '../assets/img/logo-mappa.png'
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,12 +15,12 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white shadow-lg">
+    <nav className="bg-black shadow-lg">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
             <Link to="/" className="text-lg font-semibold text-gray-900">
-              <img className='h-20' src={Logo} alt='Logo pianeta' />
+              <img className='h-14' src={Logo} alt='Logo pianeta' />
             </Link>
           </div>
 
@@ -31,7 +31,7 @@ const Navbar = () => {
                   <Link
                     key={index}
                     to={item.to}
-                    className="text-gray-900 font-semibold hover:text-gray-600 block"
+                    className="text-white font-semibold hover:text-gray-400 block"
                     >{item.name}</Link>
                 )
               })}
@@ -39,7 +39,7 @@ const Navbar = () => {
           </div>
 
           <div className="md:hidden">
-            <button onClick={toggleMenu} className="text-gray-900 hover:text-gray-700 focus:outline-none">
+            <button onClick={toggleMenu} className="text-white hover:text-gray-400 focus:outline-none">
               {menuOpen ? (
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -61,7 +61,7 @@ const Navbar = () => {
                   <Link
                     key={index}
                     to={item.to}
-                    className="text-gray-900 font-semibold hover:text-gray-600 block"
+                    className="text-white font-semibold hover:text-gray-400 block"
                     >{item.name}</Link>
                 )
               })}
