@@ -23,8 +23,8 @@ export default NO2;
 
 const NO2Section = () => {
     return (
-      <div className='flex flex-col my-12'>
-          <h2 className='text-black text-center text-3xl lg:text-4xl font-medium lg:font-extrabold mb-3 relative'>
+      <div className='flex flex-col my-12 mt-24'>
+          <h2 className='text-gray-800 text-center text-3xl lg:text-4xl font-medium lg:font-extrabold mb-3 relative'>
             N02
           </h2>
           <hr className='opacity-5' />
