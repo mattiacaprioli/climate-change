@@ -1,15 +1,14 @@
-# MeditationTime-react
+# Climate-Dashboard
 
-Questo **progetto** ti consente di prendere il tuo tempo e dedicarlo alla meditazione.
+Il sito è una moderna applicazione web sviluppata in **React** che offre un'interfaccia intuitiva per esplorare dati cruciali sul riscaldamento globale.
 
 ## Funzionalità
 
-Questo è il mio progetto per il corso React di start2impact. 
-Attraverso il sito web, è possibile apprendere alcuni consigli sulla meditazione, poter impostare la durata del timer ed in contemporanea si possono utilizzare più suoni.
+All'apertura del sito, gli utenti saranno accolti da una breve introduzione al tema del cambiamento climatico. Questo commento iniziale ci aiuta a mettere in prospettiva l'importanza di comprendere il problema e agire di conseguenza. Subito dopo, forniamo agli utenti la possibilità di selezionare e visualizzare diversi tipi di dati relativi al nostro pianeta Terra. Si potrà esplorare informazioni dettagliate su vari aspetti, consentendoti di analizzare il nostro ambiente globale in modi diversi.
 
-## Link deploy dell'app con netlify
+## Link deploy dell'app con Netlify
 
-link: https://climatedashboard.netlify.app/
+[Climate Dashboard](https://climatedashboard.netlify.app/)
 
 ## Screenshot
 
@@ -20,9 +19,14 @@ link: https://climatedashboard.netlify.app/
 - HTML
 - CSS
 - Javascript
-- Bootstrap per lo stile
-- React (React Hooks, React Router, React Context)
+- Tailwindcss per lo stile
+- React
+- Axios
 
 ## Autore
 
 Mattia Caprioli
+
+## Licenza
+
+Questo progetto è distribuito con la licenza [MIT](LICENSE.md).
