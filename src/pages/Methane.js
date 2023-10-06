@@ -40,8 +40,8 @@ const setupChartMethane = {
   datasets: [
     {
       label: "Methane",
-      backgroundColor: "rgb(255, 99, 132)",
-      borderColor: "rgb(255, 99, 132)",
+      backgroundColor: "rgb(20, 76, 186)",
+      borderColor: "rgb(30, 86, 196)",
       data: newArrayMethane,
       borderWidth: 1,
       fill: false,
@@ -92,7 +92,7 @@ const optionsChart = {
 const LineChart = () => {
   return (
     <div className="flex justify-center m-8 mb-36 md:mb-24">
-      <Line className="graphic" data={setupChartMethane} options={optionsChart} />
+      <Line className="h-60" data={setupChartMethane} options={optionsChart} />
     </div>
   );
 };

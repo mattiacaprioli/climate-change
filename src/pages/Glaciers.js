@@ -99,7 +99,7 @@ const optionsChart = {
 const LineChart = () => {
     return (
       <div className="flex justify-center m-8 mb-40 md:mb-24">
-        <Line className="graphic" data={setupChartGlaciers} options={optionsChart} />
+        <Line className="h-60" data={setupChartGlaciers} options={optionsChart} />
       </div>
     );
   };

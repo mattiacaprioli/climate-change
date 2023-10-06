@@ -42,8 +42,8 @@ const setupChartCo2 = {
   datasets: [
     {
       label: "CO2",
-      backgroundColor: "rgb(255, 99, 132)",
-      borderColor: "rgb(255, 99, 132)",
+      backgroundColor: "rgb(30, 86, 196)",
+      borderColor: "rgb(30, 86, 196)",
       data: newArrayCO2, // y-axis dates
       borderWidth: 1, // Change the thickness of the line
       fill: false, // Prevents underlined fill
@@ -96,7 +96,7 @@ const optionsChart = {
 const LineChart = () => {
     return (
       <div className="flex justify-center m-8 mb-32 md:mb-16">
-        <Line className="graphic" data={setupChartCo2} options={optionsChart} />
+        <Line className="h-60" data={setupChartCo2} options={optionsChart} />
       </div>
     );
   };

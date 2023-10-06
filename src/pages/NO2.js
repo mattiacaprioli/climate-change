@@ -44,8 +44,8 @@ const setupChartNo2 = {
   datasets: [
     {
       label: "NO2",
-      backgroundColor: "rgb(255, 99, 132)",
-      borderColor: "rgb(255, 99, 132)",
+      backgroundColor: "rgb(30, 86, 196)",
+      borderColor: "rgb(30, 86, 196)",
       data: newArrayNo2,
       borderWidth: 2, // //Change the thickness of the line
       fill: false, //  Prevents underlined fill
@@ -97,7 +97,7 @@ const optionsChart = {
 const LineChart = () => {
     return (
       <div className="flex justify-center m-8 mb-32 md:mb-16">
-        <Line className="graphic" data={setupChartNo2} options={optionsChart} />
+        <Line className="h-60" data={setupChartNo2} options={optionsChart} />
       </div>
     );
   };
