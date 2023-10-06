@@ -24,20 +24,14 @@ export default Temperature;
 const TemperatureSection = () => {
     return (
       <div className='flex flex-col my-12'>
-          <h1 className='text-black text-center text-3xl lg:text-4xl font-medium lg:font-extrabold mb-3 relative'>
-          Temperature
-          </h1>
+          <h2 className='text-black text-center text-3xl lg:text-4xl font-medium lg:font-extrabold mb-3 relative'>
+            Temperature
+          </h2>
           <hr className='opacity-5' />
           <p className='mx-12 my-8'>
-            Methane is a potent greenhouse gas whose emissions are affected by
-            industrial and agricultural activities, as well as natural processes.
-            
-            This gas significantly contributes to global warming by retaining heat
-            in the atmosphere. Its impact is reflected in the amplified greenhouse
-            effect and the release from ice deposits and permafrost. 
-            
-            Reducing methane emissions is crucial for mitigating climate change and
-            preserving the balance of our planet.
+            The increase in global temperatures is primarily driven by the excessive release of greenhouse gases, including carbon dioxide and methane, resulting from human activities like industry and transportation. These gases trap heat in the atmosphere, creating the greenhouse effect and causing significant climate changes.
+
+            The consequences are manifold: melting glaciers contribute to rising sea levels, endangering coastlines and coastal communities. More frequent extreme weather events, like storms and heatwaves, damage infrastructure and agriculture. Essential ecosystems, such as coral reefs, are at risk, impacting biodiversity.
           </p>
       </div>
     );
@@ -58,7 +52,6 @@ const setupChartTemperature = {
     },
   ],
 };
-
 const optionsChart = {
   responsive: true,
   maintainAspectRatio: false,
@@ -66,12 +59,12 @@ const optionsChart = {
     y: {
       beginAtZero: true,
       grid: {
-        color: "rgba(255, 255, 255, 0.2)", // Color and opacity of Y-axis lines
+        color: "rgba(255, 255, 255, 0.2)",
       },
     },
     x: {
       grid: {
-        color: "rgba(255, 255, 255, 0.2)", // Color and opacity of y-axis lines
+        color: "rgba(255, 255, 255, 0.2)",
       },
     },
   },
@@ -82,16 +75,22 @@ const optionsChart = {
         mode: "xy",
       },
       zoom: {
-        enabled: true,
+        wheel: {
+          enabled: true,
+        },
+        pinch: {
+          enabled: true,
+        },
         mode: "xy",
       },
     },
   },
 };
 
+
 const LineChart = () => {
     return (
-      <div className="flex justify-center m-8 mb-32 md:mb-8">
+      <div className="flex justify-center m-8 mb-32  md:mb-16">
         <Line className="graphic" data={setupChartTemperature} options={optionsChart} />
       </div>
     );

@@ -36,7 +36,6 @@ await axios
   .get(apiTemperature)
   .then((response) => {
     let dataApi = response.data.result;
-    console.log(dataApi);
 
     dataApi.forEach((item, index) => {
       if (index % 2 === 0) {
@@ -59,7 +58,6 @@ await axios
   .then((response) => {
     console.log(response);
     let dataApi = response.data.co2;
-    console.log(dataApi);
 
     dataApi.forEach((item, index) => {
       if (index % 2 === 0) {
@@ -84,7 +82,6 @@ await axios
   .then((response) => {
     console.log(response);
     let dataApi = response.data.arcticData;
-    console.log(dataApi);
 
     dataApi.forEach((item, index) => {
       if (index % 2 === 0) {
@@ -108,7 +105,6 @@ await axios
   .get(apiNO2)
   .then((response) => {
     let dataApi = response.data.nitrous;
-    console.log(dataApi);
 
     dataApi.forEach((item, index) => {
       if (index % 2 === 0) {
@@ -116,8 +112,6 @@ await axios
         newArrayNo2.push(item.average);
       }
     });
-    console.log(newArrayNo2);
-    console.log(No2Time);
   })
 
   .catch((error) => {

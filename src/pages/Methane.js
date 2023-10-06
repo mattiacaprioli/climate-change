@@ -24,20 +24,12 @@ export default Methane;
 const MethaneSection = () => {
   return (
     <div className='flex flex-col my-12'>
-        <h1 className='text-black text-center text-3xl lg:text-4xl font-medium lg:font-extrabold mb-3 relative'>
+        <h2 className='text-black text-center text-3xl lg:text-4xl font-medium lg:font-extrabold mb-3 relative'>
             Methane
-        </h1>
+        </h2>
         <hr className='opacity-5' />
         <p className='mx-12 my-8'>
-          Methane is a potent greenhouse gas whose emissions are affected by
-          industrial and agricultural activities, as well as natural processes.
-          
-          This gas significantly contributes to global warming by retaining heat
-          in the atmosphere. Its impact is reflected in the amplified greenhouse
-          effect and the release from ice deposits and permafrost. 
-          
-          Reducing methane emissions is crucial for mitigating climate change and
-          preserving the balance of our planet.
+          Methane is a powerful greenhouse gas influenced by industrial, agricultural activities, and natural processes. It significantly contributes to global warming by trapping heat in the atmosphere, leading to an intensified greenhouse effect and the release of stored methane from ice deposits and permafrost. Minimizing methane emissions is vital for addressing climate change and maintaining the planet's equilibrium.
         </p>
     </div>
   );
@@ -58,7 +50,6 @@ const setupChartMethane = {
     },
   ],
 };
-
 const optionsChart = {
   responsive: true,
   maintainAspectRatio: false,
@@ -83,7 +74,15 @@ const optionsChart = {
         mode: "xy",
       },
       zoom: {
-        enabled: true,
+        wheel: {
+          enabled: true,
+        },
+        drag: {
+          enabled: true,
+        },
+        pinch: {
+          enabled: true,
+        },
         mode: "xy",
       },
     },
@@ -92,7 +91,7 @@ const optionsChart = {
 
 const LineChart = () => {
   return (
-    <div className="flex justify-center m-8 mb-32 md:mb-8">
+    <div className="flex justify-center m-8 mb-36 md:mb-24">
       <Line className="graphic" data={setupChartMethane} options={optionsChart} />
     </div>
   );

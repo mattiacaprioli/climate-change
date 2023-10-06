@@ -24,20 +24,16 @@ export default NO2;
 const NO2Section = () => {
     return (
       <div className='flex flex-col my-12'>
-          <h1 className='text-black text-center text-3xl lg:text-4xl font-medium lg:font-extrabold mb-3 relative'>
+          <h2 className='text-black text-center text-3xl lg:text-4xl font-medium lg:font-extrabold mb-3 relative'>
             N02
-          </h1>
+          </h2>
           <hr className='opacity-5' />
           <p className='mx-12 my-8'>
-            Methane is a potent greenhouse gas whose emissions are affected by
-            industrial and agricultural activities, as well as natural processes.
-            
-            This gas significantly contributes to global warming by retaining heat
-            in the atmosphere. Its impact is reflected in the amplified greenhouse
-            effect and the release from ice deposits and permafrost. 
-            
-            Reducing methane emissions is crucial for mitigating climate change and
-            preserving the balance of our planet.
+            Nitrous oxide (NO2) is a greenhouse gas primarily produced by human activities like fossil fuel combustion, industrial processes, road transport, and intensive agriculture.
+
+            NO2 directly impacts climate change by trapping heat in the atmosphere, contributing to global warming. It also reacts with other chemicals, forming aerosol particles and nitric acid, which harm air quality and human health.
+
+            The consequences of increased NO2 emissions include glacier and polar ice melt, rising sea levels, and more extreme climate events. Additionally, NO2 contributes to soil and water acidification, affecting terrestrial and aquatic ecosystems.
           </p>
       </div>
     );
@@ -63,15 +59,15 @@ const optionsChart = {
   maintainAspectRatio: false,
   scales: {
     y: {
-      min: 310, // Set the minimum value of the y-axis
-      max: 340, // Set the maximum value of the y-axis
+      min: 310, // Valore minimo dell'asse Y
+      max: 340, // Valore massimo dell'asse Y
       grid: {
-        color: "rgba(255, 255, 255, 0.2)", // Color and opacity of Y-axis lines
+        color: "rgba(255, 255, 255, 0.2)", // Asse Y
       },
     },
     x: {
       grid: {
-        color: "rgba(255, 255, 255, 0.2)", // Color and opacity of X-axis lines
+        color: "rgba(255, 255, 255, 0.2)", // Asse X
       },
     },
   },
@@ -82,16 +78,25 @@ const optionsChart = {
         mode: "xy",
       },
       zoom: {
-        enabled: true,
+        wheel: {
+          enabled: true,
+        },
+        drag: {
+          enabled: true,
+        },
+        pinch: {
+          enabled: true,
+        },
         mode: "xy",
       },
     },
   },
 };
 
+
 const LineChart = () => {
     return (
-      <div className="flex justify-center m-8 mb-32 md:mb-8">
+      <div className="flex justify-center m-8 mb-32 md:mb-16">
         <Line className="graphic" data={setupChartNo2} options={optionsChart} />
       </div>
     );

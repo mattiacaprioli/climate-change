@@ -24,27 +24,17 @@ export default Glaciers;
 const GlaciersSection = () => {
     return (
       <div className='flex flex-col my-12'>
-          <h1 className='text-black text-center text-3xl lg:text-4xl font-medium lg:font-extrabold mb-3 relative'>
+          <h2 className='text-black text-center text-3xl lg:text-4xl font-medium lg:font-extrabold mb-3 relative'>
             Polar Ice
-          </h1>
+          </h2>
           <hr className='opacity-5' />
           <p className='mx-12 my-8'>
-            Methane is a potent greenhouse gas whose emissions are affected by
-            industrial and agricultural activities, as well as natural processes.
-            
-            This gas significantly contributes to global warming by retaining heat
-            in the atmosphere. Its impact is reflected in the amplified greenhouse
-            effect and the release from ice deposits and permafrost. 
-            
-            Reducing methane emissions is crucial for mitigating climate change and
-            preserving the balance of our planet.
+          The rapid glacier melt is primarily driven by rising global temperatures, fueled by greenhouse gas emissions like methane from both human activities and natural processes. The greenhouse effect traps heat in the atmosphere, leading to ice melt. Consequences include sea level rise, ecosystem shifts, and extreme climate events. Urgent action to reduce emissions and adopt sustainable solutions is essential to address this challenge.
           </p>
       </div>
     );
   };
 
-
-//--------------- Graphic ---------------
 const setupChartGlaciers = {
   labels: glaciersTime,
   datasets: [
@@ -57,7 +47,7 @@ const setupChartGlaciers = {
       fill: false,
       pointBorderWidth: -5,
       pointRadius: 1.5,
-      lineTension: 0.4, // Set the curvature of the lines
+      lineTension: 0.4, // Curvature of the lines
     },
     {
       label: "Extension",
@@ -68,7 +58,7 @@ const setupChartGlaciers = {
       fill: false,
       pointBorderWidth: -5,
       pointRadius: 1.5,
-      lineTension: 0.4, // Set the curvature of the lines
+      lineTension: 0.4, // Curvature of the lines
     },
   ],
 };
@@ -80,22 +70,25 @@ const optionsChart = {
     y: {
       beginAtZero: true,
       grid: {
-        color: "rgba(255, 255, 255, 0.2)", // Color and opacity of Y-axis lines
+        color: "rgba(255, 255, 255, 0.2)",
       },
     },
     x: {
       grid: {
-        color: "rgba(255, 255, 255, 0.2)", // Color and opacity of X-axis lines
+        color: "rgba(255, 255, 255, 0.2)",
       },
     },
   },
   plugins: {
     zoom: {
-      pan: {
+      wheel: {
+        enabled: true,
+      },
+      drag: {
         enabled: true,
         mode: "xy",
       },
-      zoom: {
+      pinch: {
         enabled: true,
         mode: "xy",
       },
@@ -105,7 +98,7 @@ const optionsChart = {
 
 const LineChart = () => {
     return (
-      <div className="flex justify-center m-8 mb-32 md:mb-8">
+      <div className="flex justify-center m-8 mb-40 md:mb-24">
         <Line className="graphic" data={setupChartGlaciers} options={optionsChart} />
       </div>
     );

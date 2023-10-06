@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+// import navigation data
+import { navigation } from '../data/data';
+
+// import logo
+import Logo from '../assets/img/logo-climate-dashboard.png'
+
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -13,16 +19,22 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
-            <Link to="/" className="text-lg font-semibold text-gray-900">Logo</Link>
+            <Link to="/" className="text-lg font-semibold text-gray-900">
+              <img className='h-20' src={Logo} alt='Logo pianeta' />
+            </Link>
           </div>
 
           <div className="hidden md:block">
             <div className="ml-4 flex items-center space-x-4">
-                <Link to="/Temperature" className="text-gray-900 hover:text-gray-700 block">Temperature</Link>
-                <Link to="/CO2" className="text-gray-900 hover:text-gray-700 block">Co2</Link>
-                <Link to="/Glaciers" className="text-gray-900 hover:text-gray-700 block">Glaciers</Link>
-                <Link to="/Methane" className="text-gray-900 hover:text-gray-700 block">Methane</Link>
-                <Link to="/NO2" className="text-gray-900 hover:text-gray-700 block">NO2</Link>
+              {navigation.map((item,index) =>{
+                return (
+                  <Link
+                    key={index}
+                    to={item.to}
+                    className="text-gray-900 font-semibold hover:text-gray-600 block"
+                    >{item.name}</Link>
+                )
+              })}
             </div>
           </div>
 
@@ -44,11 +56,15 @@ const Navbar = () => {
 
       <div className={`md:hidden ${menuOpen ? 'block' : 'hidden'}`}>
         <div className="pt-2 pb-3 space-y-1 text-center">
-          <Link to="/Temperature" className="text-gray-900 hover:text-gray-700 block">Temperature</Link>
-          <Link to="/CO2" className="text-gray-900 hover:text-gray-700 block">Co2</Link>
-          <Link to="/Glaciers" className="text-gray-900 hover:text-gray-700 block">Glaciers</Link>
-          <Link to="/Methane" className="text-gray-900 hover:text-gray-700 block">Methane</Link>
-          <Link to="/NO2" className="text-gray-900 hover:text-gray-700 block">NO2</Link>
+              {navigation.map((item,index) =>{
+                return (
+                  <Link
+                    key={index}
+                    to={item.to}
+                    className="text-gray-900 font-semibold hover:text-gray-600 block"
+                    >{item.name}</Link>
+                )
+              })}
         </div>
       </div>
     </nav>
